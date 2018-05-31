@@ -21,9 +21,14 @@
     </mappers>-->
     
     <!-- 注册UserMapperInterface.java文件,UserMapperInterface.java位于mapperInterface这个包下,所以class写成mapperInterface.UserMapperInterface-->
-    <!-- 注册单个接口文件  -->
+    <!-- 注册单个接口文件  
     <mappers>
         <mapper class="mapperInterface.UserMapperInterface"/>
     </mappers>
+    -->
     
+    <!-- 批量加载mapper,指定 mapper接口的包名,mybatis自动扫描包下的mapper接口进行加载  -->
+    <mappers>
+        <package name="mapperInterface"/>
+    </mappers>
 </configuration>
